@@ -1,0 +1,10 @@
+<div class="container">
+<h2>New Doctor</h2>
+<form class="form-inline" action="/doctors" method="POST">
+    <%- include('_form_fields') %>
+    <div class="btn-group" role="group">
+    <a class="btn btn-info" href="/doctors" role="button">Cancel</a> <!-- anchor are used to link things and button for interactive form or objects-->
+    <button class="btn btn-primary" typr="submit">Create</button>
+    </div>
+</form>
+</div>

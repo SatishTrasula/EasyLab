@@ -1,0 +1,12 @@
+<div class='container'>
+<h2>Recently Added</h2>
+<div class='form-group'>
+    <% labTests.forEach(labTest => { %>
+        <label class="control-label"><%= labTest.title %></label>
+        <a href="/labTests/<%= labTest.id%>">
+            <img height="150" width="100" src="<%= labTest.coverImagePath %>">
+        </a>  
+    <% }) %>
+</div>
+</div>
+

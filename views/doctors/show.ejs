@@ -1,0 +1,18 @@
+<div class="container">
+<h2>Doctor: <%= doctor.name %></h2>
+<div class="form-inline container">
+<div class="row">
+<div class="form-group"><a class="btn btn-primary" href="/doctors/<%= doctor.id%>/edit" role="button">Edit</a></div>
+<div class="form-group"><a class="btn btn-info" href="/doctors" role="button">Cancel</a></div>
+<div class="form-group"><%- include('../partials/deleteForm', {url: `/doctors/${doctor.id}`}) %></div>
+</div>
+</div>
+<% if (labTestsByDoctor.length > 0) { %>
+    <h2>Tests</h2>
+    <% labTestsByDoctor.forEach(labTest => { %>
+        <a href="/labTests/<%= labTest.id%>">
+            <img height="150" width="100" src="<%= labTest.coverImagePath %>" class="rounded">
+        </a>
+    <% }) %>    
+<% } %>
+</div>

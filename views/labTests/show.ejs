@@ -1,0 +1,16 @@
+<div class="container">
+<h2><%= labTest.title %></h2>
+
+<img src="<%= labTest.coverImagePath %>" class="rounded">
+    <div> Doctor : <%= labTest.doctor.name %></div>
+    <div> Publish Date : <%= labTest.publishDate.toISOString().split('T')[0] %></div>
+    <div> Test Amount : <%= labTest.testAmount %></div>
+    <div> Description : <%= labTest.description %></div>
+</div>
+<div>
+    <div><a class="btn btn-primary" href="/labTests/<%= labTest.id %>/edit">Edit</a></div>
+    
+    <%- include('../partials/deleteForm', {url: `/labTests/${labTest.id}`}) %>
+    <a class="btn btn-info" href="/doctors/<%= labTest.doctor.id %>">View Doctor</a>
+</div> 
+</div>
